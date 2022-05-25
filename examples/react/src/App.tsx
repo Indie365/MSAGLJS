@@ -27,9 +27,7 @@ export default function App() {
       <h1>MSGAL</h1>
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Grid item xs={12} lg={6}>
             <HighlightTextField code={source} language={'json'} onChange={setSource} annotations={annotations} />
-          </Grid>
         </Grid>
       </Grid>
       <Copyright />
