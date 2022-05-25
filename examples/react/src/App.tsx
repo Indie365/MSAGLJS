@@ -2,6 +2,9 @@ import * as React from 'react'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
+import {useState} from 'react'
+import {Grid} from '@mui/material'
+import HighlightTextField, {Annotation} from './HighlightTextField'
 
 function Copyright() {
   return (
@@ -16,9 +19,19 @@ function Copyright() {
 }
 
 export default function App() {
+  const [source, setSource] = useState('{}')
+  const [annotations, setAnnotations] = useState<Annotation[]>([])
+
   return (
     <Container maxWidth="xl">
       <h1>MSGAL</h1>
+      <Grid container spacing={1}>
+        <Grid item xs={12}>
+          <Grid item xs={12} lg={6}>
+            <HighlightTextField code={source} language={'json'} onChange={setSource} annotations={annotations} />
+          </Grid>
+        </Grid>
+      </Grid>
       <Copyright />
     </Container>
   )
