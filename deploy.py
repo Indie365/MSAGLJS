@@ -9,7 +9,7 @@ print("deploy dir: {0}".format(deploy_dir))
 
 os.chdir(deploy_dir)
 
-enlisment_dir  = "jagl"
+enlisment_dir  = os.path.join("..","jagl_tmp")
 os.system("rm -rf {0}".format(enlisment_dir))
 git_clone_cmd = "git clone https://github.com/microsoft/msagljs {0}".format(enlisment_dir)
 print("git cmd = {0}".format(git_clone_cmd))
