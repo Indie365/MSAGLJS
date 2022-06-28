@@ -1,3 +1,4 @@
+# This script builds the examples from the sources.
 # Import the os module
 import os
 import shutil
