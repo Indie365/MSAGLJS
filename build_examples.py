@@ -22,7 +22,7 @@ os.system(git_clone_cmd)
 os.chdir(enlisment_dir)
 os.system("yarn")
 
-sources = ["renderWithDeckGL","renderWithSVG" ]
+sources = ["webgl-renderer","svg-renderer" ]
 targets = ["deck.gl_backend","svg_backend" ]
 
 
