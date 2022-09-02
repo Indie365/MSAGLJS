@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>decl.gl renderer with MSAGL-JS</title>
+    <title>deck.gl renderer with MSAGL-JS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -56,6 +56,15 @@
       }
       #settings > div {
         margin: 4px 0;
+      }
+      #settings.disabled {
+        background-image: url('./spinner.gif');
+        background-size: 48px;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      #settings.disabled > div {
+        visibility: hidden;
       }
       #settings label {
         font-weight: bold;
